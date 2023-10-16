@@ -1,0 +1,39 @@
+.lmj-categories {
+    text-align: center;
+    padding-top: 30px;
+    height: 50px;
+}
+
+:root {
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+}
+
+.lmj-categories-select {
+    /* Reset */
+    height: 100%;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 15rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    background: var(--arrow-icon) no-repeat right 0.8em center / 1.4em, linear-gradient(to left, #31b572 3em, white 3em);
+    color: black;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* Remove IE arrow */
+    &::-ms-expand {
+        display: none;
+    }
+    /* Remove focus outline */
+    &:focus {
+        outline: none;
+    }
+    /* <option> colors */
+    option {
+        color: inherit;
+        background-color: #31b572;
+    }
+}

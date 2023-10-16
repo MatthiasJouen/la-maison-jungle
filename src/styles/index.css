@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.lmj-button {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #343a40;
+    background: white;
+    border: 0;
+    padding: 0.75rem 1.5rem;
+    transform: translateY(calc(var(--y, 0) * 1%)) scale(var(--scale));
+    transition: transform 0.1s;
+    position: relative;
+}
+
+.lmj-button:hover {
+    --y: -10;
+    --scale: 1.1;
+    --border-scale: 1;
+}
+
+.lmj-button:active {
+    --y: 5%;
+    --scale: 0.9;
+    --border-scale: 0.9, 0.8;
+}
+
+.lmj-button:before {
+    content: "";
+    position: absolute;
+    inset: calc(0.75rem * -1);
+    border: 0.3rem solid white;
+    transform: scale(var(--border-scale, 0));
+    transition: transform 0.125s;
+    --angle-one: 105deg;
+    --angle-two: 290deg;
+    --spread-one: 30deg;
+    --spread-two: 40deg;
+    --start-one: calc(var(--angle-one) - (var(--spread-one) * 0.5));
+    --start-two: calc(var(--angle-two) - (var(--spread-two) * 0.5));
+    --end-one: calc(var(--angle-one) + (var(--spread-one) * 0.5));
+    --end-two: calc(var(--angle-two) + (var(--spread-two) * 0.5));
+    mask: conic-gradient( transparent 0 var(--start-one), white var(--start-one) var(--end-one), transparent var(--end-one) var(--start-two), white var(--start-two) var(--end-two), transparent var(--end-two));
+    z-index: -1;
+}
+
+.lmj-button-green {
+    color: white;
+    margin-left: 25px;
+    background: #31b572;
+}
+
+.lmj-button-green:before {
+    border: 0.3rem solid #31b572;
+    mask: conic-gradient( transparent 0 var(--start-one), #31b572 var(--start-one) var(--end-one), transparent var(--end-one) var(--start-two), #31b572 var(--start-two) var(--end-two), transparent var(--end-two));
+}

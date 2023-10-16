@@ -1,0 +1,68 @@
+.lmj-plant-item-cover {
+    height: 220px;
+    width: 220px;
+    border-radius: 20px;
+}
+
+.lmj-plant-item {
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.lmj-plant-item-cover:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+.lmj-plant-item-price {
+    position: absolute;
+    border-radius: 20px 20px 20px 0;
+    background-color: #31b472;
+    color: white;
+    padding: 15px;
+    right: 0;
+    top: 0;
+    font-weight: 500;
+}
+
+.lmj-plant-item-name {
+    position: relative;
+    color: #31b472;
+    margin-top: 10px;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.lmj-plant-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.658);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.lmj-plant-modal-content {
+    background-color: #fff;
+    top: 40%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.lmj-plant-modal-close {
+    position: absolute;
+    font-size: 3vw;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+}
